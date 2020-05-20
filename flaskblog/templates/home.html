@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+  {% for post in posts.items %}
+    <div class="card mb-4">
+      <div class="card-header" style="background: rgb(86,128,233);
+    background: linear-gradient(270deg, rgba(86,128,233,1) 0%, rgba(90,185,234,1) 35%, rgba(132,235,187,1) 100%);"><a href="{{ url_for('posts.post', post_id=post.id) }}"><h5 style="color: black; text-decoration-color: rgb(172, 7, 7);">{{ post.title }}</h5></a></div>
+      <div class="card-body">
+        <div class="mb-2">
+          <img src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}" class="rounded-circle" width="58" height="60"> 
+          <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+          <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+        </div>
+        <p class="article-content">{{post.content}}</p>    	 
+      </div>
+    </div>
+  {% endfor %}
+
+<!-- Pagination -->
+    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+      {% if page_num %}
+        {% if posts.page == page_num %}
+          <a class="btn btn-primary mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+        {% else %}
+          <a class="btn btn-outline-primary mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+      {% else %}
+        ...
+      {% endif %}
+    {% endfor %}
+{% endblock content %}

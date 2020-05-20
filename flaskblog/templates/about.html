@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+    <div class="card mb-4">
+        <div class="card-header" style="background: rgb(86,128,233);
+      background: linear-gradient(270deg, rgba(86,128,233,1) 0%, rgba(90,185,234,1) 35%, rgba(132,235,187,1) 100%);"><h5>General</h6></div>
+        <div class="card-body">
+          <p>This is a secure Blog Application that provides you with the ability to share your thoughts, ideas and experiences with the world!</p>     
+          <p>Make a new account, Write your first blog and Simply POST.</p>   	        
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header" style="background: rgb(86,128,233);
+      background: linear-gradient(270deg, rgba(86,128,233,1) 0%, rgba(90,185,234,1) 35%, rgba(132,235,187,1) 100%);"><h5>API Service</h6></div>
+        <div class="card-body">
+          <p>This Application has a REST-API Service which allows users to interact with the application from various platforms.</p>     
+          
+        <div class="mb-4">
+          <h4>Posts</h4>
+          <p>Endpoint: http://127.0.0.1:5000/getPosts</p>
+          <p>Receive all posts made by current users on the blog application.</p>
+        </div>
+
+        <div class="mb-4">
+          <h4>Specific Post</h4>
+          <p>Endpoint: http://127.0.0.1:5000/getPost/#</p>
+          <p>Receive specific post from the blog application using post id.</p>
+        </div>
+
+        <hr>
+          
+          <p class="text-bold">Token Authetication</p>
+          <p>To access the endpoints below, you must use a timed token provided by our service. Please retrieve a token by sending a GET request to http://127.0.0.1:5000/api_login with username and password in body as JSON.</p>
+
+        <div class="mb-4">
+          <h4>Add Post</h4>
+          <p>Endpoint: http://127.0.0.1:5000/addPost</p>
+          <p>Add your post to our database by sending your user id, post title and post content. Reminder to include token in header of request.</p>
+        </div>
+
+        <div class="mb-4">
+          <h4>Update Post</h4>
+          <p>Endpoint: http://127.0.0.1:5000/updatePost</p>
+          <p>Update your post to our database by sending your user id, new post title and new post content. Reminder to include token in header of request.</p>
+        </div>
+
+        <div class="mb-4">
+          <h4>Delete Post</h4>
+          <p>Endpoint: http://127.0.0.1:5000/deletePost</p>
+          <p>Delete your post from our database by sending post id. Reminder to include token in header of request.</p>
+        </div>
+
+        </div>
+    </div>
+
+{% endblock content %}
