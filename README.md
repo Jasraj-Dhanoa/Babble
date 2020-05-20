@@ -11,4 +11,4 @@ Secure and Fully-Functional Python Flask Blogging Application
 * Perform all CRUD funtions
 
 ## Built With
-Python V3, Flask, Jinja, HTML, CSS, Bootstrap 4, Jquery 3 etc.
+Python V3, Flask, SQLite (SQL Database), Jinja, HTML, CSS, Bootstrap 4, Jquery 3 etc.
