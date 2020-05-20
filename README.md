@@ -1,10 +1,14 @@
 # Babble
 Secure and Fully-Functional Python Flask Blogging Application
 
-#Key Features
-1) Secure
+## Key Features
+* All CRUD Blogging Features
+* Password Encryption/Hashing
+* User Accounts and Authetication
 
-One Paragraph of project description goes here
+## REST API
+* Token Authetication
+* Perform all CRUD funtions
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Built With
+Python V3, Flask, Jinja, HTML, CSS, Bootstrap 4, Jquery 3 etc.
