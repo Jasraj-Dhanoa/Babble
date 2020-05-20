@@ -1,5 +1,5 @@
 # Babble
-Secure and Fully-Functional Python Flask Blogging Application
+Secure, Fully-Functional and Scalable Python Flask Blogging Application
 
 ## Key Features
 * All CRUD Blogging Features
